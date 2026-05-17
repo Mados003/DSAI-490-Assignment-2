@@ -96,7 +96,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input",   required=True, type=Path)
     parser.add_argument("-o", "--output",  required=True, type=Path)
-    parser.add_argument("--model",         default="ae", choices=["ae", "cgan", "lstm", "transformer"])
+    parser.add_argument("--model",         default="cgan", choices=["ae", "cgan", "lstm", "transformer"])
     parser.add_argument("--weights-dir",   type=Path, default=Path(__file__).parent / "weights")
     args = parser.parse_args()
 
